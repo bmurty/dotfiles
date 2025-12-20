@@ -24,10 +24,12 @@
 #       photomgmt
 # 
 # Requirements:
-#  - Windows machine
-#  - Python 3: https://www.python.org/downloads/
-#  - ExifRead: https://pypi.org/project/ExifRead/
-#  - Python-dotenv: https://pypi.org/project/python-dotenv/
+#  - For Windows 11
+#   - Python 3: https://www.python.org/downloads/
+#   - ExifRead: https://pypi.org/project/ExifRead/
+#   - Python-dotenv: https://pypi.org/project/python-dotenv/
+#  - For Ubuntu 24.04
+#   - sudo apt install python-is-python3 python3-exifread python3-dotenv
 #  
 
 import sys
@@ -58,7 +60,7 @@ yearNow = now.year
 
 # Load the configuration values from "photos.env"
 script_file_path = os.path.dirname(__file__)
-config = dotenv_values("%s\\photos.env" % script_file_path)
+config = dotenv_values("%s/photos.env" % script_file_path)
 
 # Where the media files are and where they're going
 sourceDir = "%s" % (config['PHOTOMGMT_SOURCE_DIR'])
@@ -110,7 +112,7 @@ lastYear = 0
 #  - Name the copies according to their timestamps, defaulting to today's date
 #  - If more than one photo has the same timestamp, add suffixes ('a', 'b', etc) to the file names
 for photo in photos:
-    original = "%s\\%s" % (sourceDir, photo)
+    original = "%s/%s" % (sourceDir, photo)
     fileExtension = os.path.splitext(original)[1]
     suffix = 'a'
 
@@ -141,7 +143,7 @@ for photo in photos:
         shutil.move(original, duplicate)
     except Exception:
         # Something went wrong, move the file to the error directory
-        shutil.move(original, "%s\\%s" % (errorDir, photo))
+        shutil.move(original, "%s/%s" % (errorDir, photo))
         problems.append(photo)
     except:
         sys.exit("Cancelled")
