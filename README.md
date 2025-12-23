@@ -1,11 +1,12 @@
-# Brendan Murty's dotfiles
+# dotfiles
 
-Configuration files for a local development environment.
+Configuration files I use for my local development environment.
 
 ## Contents
 
 - **[atom](atom/)**: [Atom](https://atom.io/) text editor configuration
 - **[bash](bash/)**: Bash terminal configuration
+- **[cursor](cursor/)**: [Cursor](https://cursor.com/download) IDE configuration
 - **[git](git/)**: [Git configuration](https://git-scm.com/docs/git-config) including alias commands
 - **[macos](macos/)**: [macOS](https://www.apple.com/au/macos/big-sur/) configuration
 - **[scripts](scripts/)**: Various scripts to assist with new system setup and automated backup processes

@@ -1,0 +1,13 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Cursor Dark High Contrast",
+    "editor.fontFamily": "'CommitMono', 'monospace', monospace",
+    "editor.fontSize": 22,
+    "editor.minimap.sectionHeaderFontSize": 14,
+    "debug.console.fontSize": 22,
+    "scm.inputFontSize": 14,
+    "terminal.integrated.fontSize": 22,
+    "markdown.preview.fontSize": 22,
+    "cursor.composer.textSizeScale": 1.15,
+    "cursor.composer.usageSummaryDisplay": "always"
+}
