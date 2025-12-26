@@ -54,5 +54,6 @@ rclone mount \
 --uid=$USER_ID \
 --gid=$USER_ID \
 --allow-other \
+--allow-non-empty \
 dropbox: $DROPBOX_DIR &
 
