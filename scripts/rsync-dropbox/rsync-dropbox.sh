@@ -59,3 +59,4 @@ rclone mount \
 --allow-non-empty \
 dropbox: $DROPBOX_DIR &
 
+exit 0
