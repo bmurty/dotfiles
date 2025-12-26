@@ -60,6 +60,7 @@ rclone mount \
 --gid=$USER_ID \
 --allow-other \
 --allow-non-empty \
+--links \
 dropbox:/ $DROPBOX_DIR &
 
 exit 0
