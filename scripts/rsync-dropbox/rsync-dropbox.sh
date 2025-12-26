@@ -8,6 +8,7 @@
 #  - A remote rclone sync has already been configured using the name of "dropbox"
 #  - This file should be located at: /home/USERNAME/rsync-dropbox.sh
 #  - This file must be run via: sudo /home/USERNAME/rsync-dropbox.sh
+#  - The user running this script must be an admin in the sudo group
 #
 # Optional:
 #  - Add aliases to ~/.bashrc:
@@ -21,16 +22,16 @@ LOG_FILE=$SCRIPT_DIR/rsync-dropbox.log
 
 # Exit early if the env file doesn't exist
 
-if [ ! -e ./.env ]; then
-  echo "Cancelled, file not found: .env"
+if [ ! -e "$SCRIPT_DIR/rsync-dropbox.env" ]; then
+  echo "Cancelled, file not found: rsync-dropbox.env"
   echo "Initialising file, please edit that and try again."
-  cp -n ./rsync-dropbox.sample.env ./rsync-dropbox.env
+  cp -n "$SCRIPT_DIR/rsync-dropbox.sample.env" "$SCRIPT_DIR/rsync-dropbox.env"
   exit 1
 fi
 
 # Load the env vars
 
-source ./rsync-dropbox.env
+source "$SCRIPT_DIR/rsync-dropbox.env"
 
 # Preparing aliases
 
@@ -46,9 +47,11 @@ chown $USER_ID:$USER_ID $LOG_FILE
 # Start the rclone mount in the background
 
 rclone mount \
---vfs-cache-mode=full \
 --config=$CONFIG_FILE \
 --cache-dir=$CACHE_DIR \
+--vfs-cache-mode=full \
+--cache-chunk-total-size=1500G \
+--cache-workers=8 \
 --log-file=$LOG_FILE \
 --log-level=INFO \
 --dropbox-batch-mode=sync \
@@ -57,6 +60,6 @@ rclone mount \
 --gid=$USER_ID \
 --allow-other \
 --allow-non-empty \
-dropbox: $DROPBOX_DIR &
+dropbox:/ $DROPBOX_DIR &
 
 exit 0
