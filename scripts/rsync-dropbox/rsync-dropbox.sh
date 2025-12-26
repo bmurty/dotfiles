@@ -51,12 +51,12 @@ rclone mount \
 --cache-dir=$CACHE_DIR \
 --vfs-cache-mode=full \
 --cache-chunk-total-size=1500G \
---cache-workers=2 \
+--cache-workers=8 \
 --log-file=$LOG_FILE \
 --log-level=INFO \
 --dropbox-batch-mode=sync \
 --transfers=8 \
---checkers=2 \
+--checkers=8 \
 --uid=$USER_ID \
 --gid=$USER_ID \
 --allow-other \
