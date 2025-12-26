@@ -6,8 +6,8 @@
 # Requirements:
 #  - Debian based Linux distribution
 #  - A remote rclone sync has already been configured using the name of "dropbox"
-#  - This file must be located at: /home/USERNAME.local/bin/rsync-dropbox.sh
-#  - This file must be run via: sudo /home/USERNAME/.local/bin/rsync-dropbox.sh
+#  - This file should be located at: /home/USERNAME/rsync-dropbox.sh
+#  - This file must be run via: sudo /home/USERNAME/rsync-dropbox.sh
 #
 # Optional:
 #  - Add aliases to ~/.bashrc:
@@ -48,7 +48,7 @@ rclone mount \
 --config=$CONFIG_FILE \
 --cache-dir=$CACHE_DIR \
 --log-file=$LOG_FILE \
---log-level=DEBUG \
+--log-level=INFO \
 --dropbox-batch-mode=sync \
 --transfers=64 \
 --uid=$USER_ID \
