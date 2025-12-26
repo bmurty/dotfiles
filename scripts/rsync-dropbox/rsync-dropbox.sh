@@ -11,37 +11,39 @@
 #
 # Optional:
 #  - Add aliases to ~/.bashrc:
-#     alias dropboxmount="sudo /home/USERNAME/.local/bin/startup-dropbox-mount.sh"
+#     alias dropboxmount="sudo /home/USERNAME/rsync-dropbox.sh"
 #     alias dropboxunmount="sudo fusermount -u /home/USERNAME/Dropbox"
-#     alias dropboxlogs="tail -f -n 20 /home/USERNAME/.local/bin/startup-dropbox-mount.log"
+#     alias dropboxlogs="tail -f -n 20 /home/USERNAME/rsync-dropbox.log"
 #
 
 SCRIPT_DIR=$(dirname "$0")
 LOG_FILE=$SCRIPT_DIR/rsync-dropbox.log
 
+# Exit early if the env file doesn't exist
+
 if [ ! -e ./.env ]; then
   echo "Cancelled, file not found: .env"
   echo "Initialising file, please edit that and try again."
-  cp -n ./.env.sample ./.env
+  cp -n ./rsync-dropbox.sample.env ./rsync-dropbox.env
   exit 1
 fi
 
-echo "Loading env vars from './.env'"
+# Load the env vars
 
-source ./.env
+source ./rsync-dropbox.env
 
-echo "Preparing aliases"
+# Preparing aliases
 
 alias rclone="$RCLONE_BIN"
 alias fusermount="$FUSERMOUNT_BIN"
 
-echo "Initialising log file '$LOG_FILE'"
+# Initialise the log file
 
 touch $LOG_FILE
 truncate -s 0 $LOG_FILE
 chown $USER_ID:$USER_ID $LOG_FILE
 
-echo "Starting rclone mount in the background"
+# Start the rclone mount in the background
 
 rclone mount \
 --vfs-cache-mode=full \
