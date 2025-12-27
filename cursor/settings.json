@@ -113,5 +113,8 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "docker.extension.enableComposeLanguageServer": false,
     "githubPullRequests.createOnPublishBranch": "never",
-    "geminicodeassist.displayInlineContextHint": false
+    "geminicodeassist.displayInlineContextHint": false,
+    "geminicodeassist.inlineSuggestions.suggestionSpeed": "Slow",
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+    "editor.screenReaderAnnounceInlineSuggestion": false
 }
