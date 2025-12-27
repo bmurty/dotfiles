@@ -1,5 +1,0 @@
-.env
-*.env
-!rsync-dropbox.sample.env
-
-*.log

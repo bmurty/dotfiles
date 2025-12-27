@@ -6,32 +6,32 @@
 # Requirements:
 #  - Debian based Linux distribution
 #  - A remote rclone sync has already been configured using the name of "dropbox"
-#  - This file should be located at: /home/USERNAME/rsync-dropbox.sh
-#  - This file must be run via: sudo /home/USERNAME/rsync-dropbox.sh
+#  - This file should be located at: /home/USERNAME/dropbox-rsync.sh
+#  - This file must be run via: sudo /home/USERNAME/dropbox-rsync.sh
 #  - The user running this script must be an admin in the sudo group
 #
 # Optional:
 #  - Add aliases to ~/.bashrc:
-#     alias dropboxmount="sudo /home/USERNAME/rsync-dropbox.sh"
+#     alias dropboxmount="sudo /home/USERNAME/dropbox-rsync.sh"
 #     alias dropboxunmount="sudo fusermount -u /home/USERNAME/Dropbox"
-#     alias dropboxlogs="tail -f -n 20 /home/USERNAME/rsync-dropbox.log"
+#     alias dropboxlogs="tail -f -n 20 /home/USERNAME/dropbox-rsync.log"
 #
 
 SCRIPT_DIR=$(dirname "$0")
-LOG_FILE=$SCRIPT_DIR/rsync-dropbox.log
+LOG_FILE=$SCRIPT_DIR/dropbox-rsync.log
 
 # Exit early if the env file doesn't exist
 
-if [ ! -e "$SCRIPT_DIR/rsync-dropbox.env" ]; then
-  echo "Cancelled, file not found: rsync-dropbox.env"
+if [ ! -e "$SCRIPT_DIR/dropbox-rsync.env" ]; then
+  echo "Cancelled, file not found: dropbox-rsync.env"
   echo "Initialising file, please edit that and try again."
-  cp -n "$SCRIPT_DIR/rsync-dropbox.sample.env" "$SCRIPT_DIR/rsync-dropbox.env"
+  cp -n "$SCRIPT_DIR/dropbox-rsync.sample.env" "$SCRIPT_DIR/dropbox-rsync.env"
   exit 1
 fi
 
 # Load the env vars
 
-source "$SCRIPT_DIR/rsync-dropbox.env"
+source "$SCRIPT_DIR/dropbox-rsync.env"
 
 # Preparing aliases
 
