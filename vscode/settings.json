@@ -8,19 +8,18 @@
   "editor.autoClosingQuotes": "never",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "CommitMono",
-  "editor.fontLigatures": false,
-  "editor.fontSize": 22,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 24,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.inlineSuggest.enabled": true,
-  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestions": {
     "comments": false,
     "other": true,
     "strings": false
   },
-  "editor.quickSuggestionsDelay": 1000,
+  "editor.quickSuggestionsDelay": 4000,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "comments": "#666",
@@ -38,6 +37,7 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.eol": "\n",
+  "geminicodeassist.enableTelemetry": false,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -54,6 +54,7 @@
   "markdown.preview.fontFamily": "CommitMono",
   "markdown.preview.fontSize": 22,
   "prettier.requireConfig": true,
+  "security.workspace.trust.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
   "window.commandCenter": true,
@@ -81,11 +82,9 @@
     "window.activeBorder": "#000",
     "window.inactiveBorder": "#000"
   },
-  "workbench.colorTheme": "Copilot Theme - Higher Contrast",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.list.openMode": "doubleClick",
-  "workbench.startupEditor": "none",
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
@@ -109,18 +108,9 @@
   },
   "git.openRepositoryInParentFolders": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontSize": 20,
-  "terminal.integrated.profiles.windows": {
-    "Git Bash": {
-      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
-    },
-    "PowerShell 7": {
-      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
-    }
-  },
-  "terminal.integrated.fontFamily": "CommitMono Regular",
+  "terminal.integrated.fontFamily": "CommitMono",
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabStopWidth": 4,
@@ -128,7 +118,6 @@
   "git.inputValidationSubjectLength": null,
   "git.inputValidationLength": 150,
   "editor.stickyScroll.enabled": true,
-  "eslint.ignoreUntitled": true,
   "workbench.editor.empty.hint": "hidden",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
@@ -138,9 +127,6 @@
   "window.confirmSaveUntitledWorkspace": false,
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
   "window.customTitleBarVisibility": "auto",
   "terminal.integrated.allowedLinkSchemes": [
     "file",
@@ -157,5 +143,14 @@
     "sound": "off"
   },
   "window.menuBarVisibility": "visible",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "workbench.colorTheme": "Copilot Theme - Higher Contrast",
+  "geminicodeassist.displayInlineContextHint": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.startupEditor": "none",
+  "editor.minimap.enabled": false,
+  "update.mode": "manual",
+  "http.systemCertificatesNode": true
 }
