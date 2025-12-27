@@ -18,6 +18,12 @@
 #
 
 SCRIPT_DIR=$(dirname "$0")
+
+USER_DIR=$HOME
+USER_NAME=$(id -un)
+USER_UID=$(id -u)
+USER_GID=$(id -g)
+
 LOG_FILE=$SCRIPT_DIR/dropbox-rsync.log
 
 # Exit early if the env file doesn't exist
@@ -42,13 +48,13 @@ alias fusermount="$FUSERMOUNT_BIN"
 
 touch $LOG_FILE
 truncate -s 0 $LOG_FILE
-chown $USER_ID:$USER_ID $LOG_FILE
+chown $USER_UID:$USER_GID $LOG_FILE
 
 # Start the rclone mount in the background
 
 rclone mount \
---config=$CONFIG_FILE \
---cache-dir=$CACHE_DIR \
+--config=$RCLONE_CONFIG_FILE \
+--cache-dir=$RCLONE_CACHE_DIR \
 --vfs-cache-mode=full \
 --cache-chunk-total-size=1500G \
 --cache-workers=8 \
@@ -57,8 +63,8 @@ rclone mount \
 --dropbox-batch-mode=sync \
 --transfers=8 \
 --checkers=8 \
---uid=$USER_ID \
---gid=$USER_ID \
+--uid=$USER_UID \
+--gid=$USER_GID \
 --allow-other \
 --allow-non-empty \
 --links \
