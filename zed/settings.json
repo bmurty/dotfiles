@@ -9,6 +9,7 @@
   },
   "git": {
     "inline_blame": {
+      "enabled": false,
       "show_commit_summary": true,
       "delay_ms": 500,
     },
