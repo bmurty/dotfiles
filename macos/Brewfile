@@ -1,3 +1,0 @@
-brew "node"
-
-cask "visual-studio-code"
