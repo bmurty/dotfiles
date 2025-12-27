@@ -4,7 +4,6 @@ Configuration files I use for my local development environment.
 
 ## Contents
 
-- **[atom](atom/)**: [Atom](https://atom.io/) text editor configuration
 - **[bash](bash/)**: Bash terminal configuration
 - **[cursor](cursor/)**: [Cursor](https://cursor.com/download) IDE configuration
 - **[git](git/)**: [Git configuration](https://git-scm.com/docs/git-config) including alias commands
