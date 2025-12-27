@@ -4,7 +4,7 @@
 # Using rsync to mount a synced Dropbox folder
 #
 # Requirements:
-#  - Debian based Linux distribution
+#  - A modern Linux distribution like Ubuntu 24.04 LTS
 #  - A remote rclone sync has already been configured using the name of "dropbox"
 #  - This file should be located at: /home/USERNAME/dropbox-rsync.sh
 #  - This file must be run via: sudo /home/USERNAME/dropbox-rsync.sh
