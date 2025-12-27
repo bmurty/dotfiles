@@ -11,11 +11,6 @@ set history=200
 set noerrorbells
 set visualbell
 
-" Syntax highlighting
-
-filetype plugin on
-syntax on
-
 " Text formatting
 
 set autoindent
@@ -32,19 +27,20 @@ set virtualedit=block
 set ignorecase
 set smartcase
 
-" Show trailing whitespace
+" Syntax highlighting
 
-set list listchars=trail:.,tab:>.
+filetype plugin on
+syntax on
+set termguicolors
 
-" Line numbers
-
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight LineNr        guifg=#222222
+highlight vimComment    guifg=#666666
+highlight vimTodo       guibg=#4d0045 guifg=#dbccda cterm=NONE ctermfg=NONE ctermbg=NONE
 
 " Keybindings
 
-" Ctrl+Shift+up move line above
+" Ctrl+Shift+up to swap current line with the line above
 nmap <C-S-Up> :m -2<CR>
 
-"Ctrl+Shift+down move line below
+"Ctrl+Shift+down to swap current line with the line below
 nmap <C-S-Down> :m +1<CR>
-

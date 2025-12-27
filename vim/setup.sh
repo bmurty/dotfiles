@@ -1,5 +1,7 @@
-touch ~/.vimrc
+mkdir -p ~/.vim/syntax
 
-cp ~/.vimrc ~/.vimrc.before-dotfiles-base.bak
+touch ~/.vim/vimrc
 
-cp custom.vimrc ~/.vimrc
+cp ~/.vim/vimrc ~/.vim/vimrc.before-dotfiles-base.bak
+
+cp custom.vimrc ~/.vim/vimrc
