@@ -1,0 +1,42 @@
+{
+  "auto_update": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "calls": {
+    "mute_on_join": true,
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": true,
+      "delay_ms": 500,
+    },
+  },
+  "base_keymap": "Atom",
+  "disable_ai": true,
+  "buffer_font_family": "CommitMono",
+  "agent": {
+    "enable_feedback": false,
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5",
+    },
+    "model_parameters": [],
+  },
+  "context_servers": {
+    "mcp-server-github": {
+      "enabled": false,
+      "settings": [],
+    },
+  },
+  "buffer_line_height": "standard",
+  "buffer_font_weight": 500.0,
+  "ui_font_size": 17.0,
+  "buffer_font_size": 20.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Vercel Dark",
+  },
+}
