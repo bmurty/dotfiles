@@ -65,6 +65,16 @@
     "show_branch_icon": true,
     "show_menus": true,
   },
+  "debugger": {
+    "button": false,
+  },
+  "notification_panel": {
+    "button": false,
+  },
+  "terminal": {
+    "dock": "bottom",
+    "default_height": 400,
+  },
   "project_panel": {
     "auto_fold_dirs": false,
     "indent_size": 20,
