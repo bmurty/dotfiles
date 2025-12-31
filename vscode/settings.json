@@ -1,18 +1,47 @@
 {
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "other": "off",
+      "strings": "off"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
   "clock.alignment": "Right",
   "clock.format": "h:MMtt",
   "clock.iconName": "none",
   "css.validate": false,
   "debug.console.fontSize": 20,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "docker.extension.enableComposeLanguageServer": false,
   "editor.autoClosingBrackets": "never",
   "editor.autoClosingQuotes": "never",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
   "editor.fontFamily": "CommitMono",
   "editor.fontLigatures": true,
   "editor.fontSize": 24,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": false,
+  "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestions": {
     "comments": false,
@@ -20,18 +49,23 @@
     "strings": false
   },
   "editor.quickSuggestionsDelay": 4000,
+  "editor.stickyScroll.enabled": true,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "comments": "#666",
     "textMateRules": [
       {
-        "scope": ["comment"],
+        "scope": [
+          "comment"
+        ],
         "settings": {
           "fontStyle": ""
         }
       }
     ]
   },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -41,7 +75,13 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.inputValidation": false,
+  "git.inputValidationLength": 150,
+  "git.inputValidationSubjectLength": null,
+  "git.openRepositoryInParentFolders": "never",
   "git.untrackedChanges": "separate",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "githubPullRequests.createOnPublishBranch": "never",
   "indentRainbow.colors": [
     "rgba(255,255,64,0.04)",
     "rgba(127,255,127,0.04)",
@@ -51,13 +91,50 @@
   "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
   "javascript.validate.enable": false,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "deno.json",
+        "deno.jsonc"
+      ],
+      "url": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json"
+    },
+    {
+      "fileMatch": [
+        "package.json"
+      ],
+      "url": "https://www.schemastore.org/package"
+    }
+  ],
   "markdown.preview.fontFamily": "CommitMono",
   "markdown.preview.fontSize": 22,
-  "prettier.requireConfig": true,
+  "redhat.telemetry.enabled": false,
+  "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "docker-desktop"
+  ],
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.fontFamily": "CommitMono",
+  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.scrollback": 2500,
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
+  "terminal.integrated.tabStopWidth": 4,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "update.mode": "manual",
   "window.commandCenter": true,
+  "window.confirmSaveUntitledWorkspace": false,
+  "window.customTitleBarVisibility": "auto",
+  "window.menuBarVisibility": "visible",
+  "workbench.activityBar.location": "top",
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#23c5b0",
     "activityBar.background": "#000",
@@ -82,75 +159,20 @@
     "window.activeBorder": "#000",
     "window.inactiveBorder": "#000"
   },
+  "workbench.colorTheme": "Copilot Theme - Higher Contrast",
+  "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.list.openMode": "doubleClick",
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.formatOnSave": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "other": "off",
-      "strings": "off"
-    },
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.wordWrap": "on"
-  },
-  "git.openRepositoryInParentFolders": "never",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.fontSize": 20,
-  "terminal.integrated.fontFamily": "CommitMono",
-  "terminal.integrated.scrollback": 2500,
-  "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
-  "terminal.integrated.tabStopWidth": 4,
-  "git.inputValidation": false,
-  "git.inputValidationSubjectLength": null,
-  "git.inputValidationLength": 150,
-  "editor.stickyScroll.enabled": true,
-  "workbench.editor.empty.hint": "hidden",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
-  },
-  "workbench.activityBar.location": "top",
   "workbench.sideBar.location": "left",
-  "window.confirmSaveUntitledWorkspace": false,
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.unicodeHighlight.ambiguousCharacters": false,
-  "window.customTitleBarVisibility": "auto",
-  "terminal.integrated.allowedLinkSchemes": [
-    "file",
-    "http",
-    "https",
-    "mailto",
-    "vscode",
-    "vscode-insiders",
-    "docker-desktop"
-  ],
-  "security.promptForLocalFileProtocolHandling": false,
-  "redhat.telemetry.enabled": false,
-  "accessibility.signals.lineHasInlineSuggestion": {
-    "sound": "off"
-  },
-  "window.menuBarVisibility": "visible",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "docker.extension.enableComposeLanguageServer": false,
-  "githubPullRequests.createOnPublishBranch": "never",
-  "workbench.colorTheme": "Copilot Theme - Higher Contrast",
-  "geminicodeassist.displayInlineContextHint": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.startupEditor": "none",
-  "editor.minimap.enabled": false,
-  "update.mode": "manual",
-  "http.systemCertificatesNode": true
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json": [
+      "docker-compose.yml"
+    ],
+    "https://www.schemastore.org/github-workflow": [
+      ".github/*.yml",
+      ".github/**/*.yml"
+    ]
+  }
 }
