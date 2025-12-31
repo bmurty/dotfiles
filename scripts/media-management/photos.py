@@ -90,6 +90,7 @@ mediaFileExtensions = [
     '.jpg',
     '.JPG',
     'jpeg',
+    'JPEG',
     '.mov',
     '.MOV',
     '.mp4',
