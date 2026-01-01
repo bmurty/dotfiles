@@ -1,4 +1,7 @@
 {
+  "edit_predictions": {
+    "mode": "subtle",
+  },
   "toolbar": {
     "code_actions": true,
   },
@@ -38,7 +41,7 @@
     },
   },
   "base_keymap": "Atom",
-  "disable_ai": true,
+  "disable_ai": false,
   "buffer_font_family": "CommitMono",
   "agent": {
     "enable_feedback": false,
@@ -50,8 +53,8 @@
   },
   "context_servers": {
     "mcp-server-github": {
-      "enabled": false,
-      "settings": [],
+      "enabled": true,
+      "settings": {},
     },
   },
   "buffer_line_height": "standard",
@@ -64,6 +67,7 @@
   "title_bar": {
     "show_branch_icon": true,
     "show_menus": true,
+    "show_onboarding_banner": false,
   },
   "debugger": {
     "button": false,
