@@ -1,5 +1,10 @@
 {
+  "agent_ui_font_size": 22.0,
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
   "edit_predictions": {
+    "disabled_globs": ["~/.**"],
     "mode": "subtle",
   },
   "toolbar": {
