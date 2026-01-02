@@ -36,18 +36,49 @@ gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-dominant
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
 gsettings set org.gnome.shell.extensions.dash-to-dock default-windows-preview-to-open true
 
-## Extension: Hide Top Bar - https://extensions.gnome.org/extension/545/hide-top-bar/
-
-gsettings set org.gnome.shell.extensions.hidetopbar animation-time-autohide 0
-gsettings set org.gnome.shell.extensions.hidetopbar animation-time-overview 2.7755575615628914e-17
-gsettings set org.gnome.shell.extensions.hidetopbar enable-active-window false
-gsettings set org.gnome.shell.extensions.hidetopbar enable-intellihide false
-gsettings set org.gnome.shell.extensions.hidetopbar mouse-sensitive true
-gsettings set org.gnome.shell.extensions.hidetopbar mouse-sensitive-fullscreen-window false
-gsettings set org.gnome.shell.extensions.hidetopbar shortcut-delay 1.3877787807814457e-16
-
 ## Extension: Rounded Window Corners Reborn - https://extensions.gnome.org/extension/7048/rounded-window-corners-reborn/
 
 gsettings set org.gnome.shell.extensions.rounded-window-corners-reborn border-width 0
 gsettings set org.gnome.shell.extensions.rounded-window-corners-reborn skip-libadwaita-app false
 gsettings set org.gnome.shell.extensions.rounded-window-corners-reborn global-rounded-corner-settings "[{'padding': <{'left': uint32 0, 'right': 0, 'top': 0, 'bottom': 0}>, 'keepRoundedCorners': <{'maximized': false, 'fullscreen': false}>, 'borderRadius': <uint32 0>, 'smoothing': <0.0>, 'borderColor': <(0.5, 0.5, 0.5, 1.0)>, 'enabled': <true>}]"
+
+## Extension: Dash to Panel - https://extensions.gnome.org/extension/1160/dash-to-panel/
+
+gsettings set org.gnome.shell.extensions.dash-to-panel animate-appicon-hover-animation-extent {'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+gsettings set org.gnome.shell.extensions.dash-to-panel appicon-margin 4
+gsettings set org.gnome.shell.extensions.dash-to-panel appicon-padding 4
+gsettings set org.gnome.shell.extensions.dash-to-panel appicon-style 'NORMAL'
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant false
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override false
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-unfocused-different false
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-position 'LEFT'
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-size 0
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'DOTS'
+gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused 'DOTS'
+gsettings set org.gnome.shell.extensions.dash-to-panel extension-version 72
+gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight false
+gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant true
+gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-opacity 100
+gsettings set org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup true
+gsettings set org.gnome.shell.extensions.dash-to-panel highlight-appicon-hover-background-color 'rgb(26,95,180)'
+gsettings set org.gnome.shell.extensions.dash-to-panel highlight-appicon-hover-border-radius 0
+gsettings set org.gnome.shell.extensions.dash-to-panel hotkeys-overlay-combo 'TEMPORARILY'
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-anchors '{"LHC-0000000000000":"MIDDLE"}'
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '{"LHC-0000000000000":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":false,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-lengths '{}'
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-positions '{"LHC-0000000000000":"LEFT"}'
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-side-margins 0
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-side-padding 8
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-sizes '{"LHC-0000000000000":64}'
+gsettings set org.gnome.shell.extensions.dash-to-panel panel-top-bottom-padding 0
+gsettings set org.gnome.shell.extensions.dash-to-panel prefs-opened true
+gsettings set org.gnome.shell.extensions.dash-to-panel scroll-icon-action 'NOTHING'
+gsettings set org.gnome.shell.extensions.dash-to-panel scroll-panel-action 'NOTHING'
+gsettings set org.gnome.shell.extensions.dash-to-panel show-apps-icon-file ''
+gsettings set org.gnome.shell.extensions.dash-to-panel show-apps-icon-side-padding 0
+gsettings set org.gnome.shell.extensions.dash-to-panel trans-bg-color '#000000'
+gsettings set org.gnome.shell.extensions.dash-to-panel trans-panel-opacity 1.0
+gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg true
+gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-opacity true
+gsettings set org.gnome.shell.extensions.dash-to-panel tray-size 0
+gsettings set org.gnome.shell.extensions.dash-to-panel window-preview-title-position 'TOP'
