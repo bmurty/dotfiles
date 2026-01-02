@@ -36,9 +36,18 @@ gsettings set org.gnome.shell.extensions.dash-to-dock running-indicator-dominant
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
 gsettings set org.gnome.shell.extensions.dash-to-dock default-windows-preview-to-open true
 
-## Transparent Top Bar extension - https://extensions.gnome.org/extension/3960/transparent-top-bar-adjustable-transparency/
+## Extension: Hide Top Bar - https://extensions.gnome.org/extension/545/hide-top-bar/
 
-gsettings set com.ftpix.transparentbar dark-full-screen false
-gsettings set com.ftpix.transparentbar transparency 1
-gsettings set com.ftpix.transparentbar disable-text-shadow true
+gsettings set org.gnome.shell.extensions.hidetopbar animation-time-autohide 0
+gsettings set org.gnome.shell.extensions.hidetopbar animation-time-overview 2.7755575615628914e-17
+gsettings set org.gnome.shell.extensions.hidetopbar enable-active-window false
+gsettings set org.gnome.shell.extensions.hidetopbar enable-intellihide false
+gsettings set org.gnome.shell.extensions.hidetopbar mouse-sensitive true
+gsettings set org.gnome.shell.extensions.hidetopbar mouse-sensitive-fullscreen-window false
+gsettings set org.gnome.shell.extensions.hidetopbar shortcut-delay 1.3877787807814457e-16
 
+## Extension: Rounded Window Corners Reborn - https://extensions.gnome.org/extension/7048/rounded-window-corners-reborn/
+
+gsettings set org.gnome.shell.extensions.rounded-window-corners-reborn border-width 0
+gsettings set org.gnome.shell.extensions.rounded-window-corners-reborn skip-libadwaita-app false
+gsettings set org.gnome.shell.extensions.rounded-window-corners-reborn global-rounded-corner-settings "[{'padding': <{'left': uint32 0, 'right': 0, 'top': 0, 'bottom': 0}>, 'keepRoundedCorners': <{'maximized': false, 'fullscreen': false}>, 'borderRadius': <uint32 0>, 'smoothing': <0.0>, 'borderColor': <(0.5, 0.5, 0.5, 1.0)>, 'enabled': <true>}]"
