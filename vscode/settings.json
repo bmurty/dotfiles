@@ -37,7 +37,7 @@
   },
   "editor.fontFamily": "CommitMono",
   "editor.fontLigatures": true,
-  "editor.fontSize": 24,
+  "editor.fontSize": 22,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": false,
@@ -71,7 +71,6 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.eol": "\n",
-  "geminicodeassist.enableTelemetry": false,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -174,5 +173,23 @@
       ".github/*.yml",
       ".github/**/*.yml"
     ]
-  }
+  },
+  "files.exclude": {
+    "**/.zed/**": true
+  },
+  "files.watcherExclude": {
+    "**/.zed/**": true
+  },
+  "git.blame.statusBarItem.enabled": false,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "terminal.integrated.shellIntegration.history": 1000,
+  "terminal.integrated.bellDuration": 0,
+  "terminal.integrated.defaultProfile.linux": "bash"
 }
