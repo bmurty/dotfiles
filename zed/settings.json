@@ -27,7 +27,7 @@
   "git_panel": {
     "status_style": "icon",
   },
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
@@ -81,6 +81,9 @@
     "button": false,
   },
   "terminal": {
+    "shell": {
+      "program": "/bin/bash",
+    },
     "dock": "bottom",
     "default_height": 400,
   },
