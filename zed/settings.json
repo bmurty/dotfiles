@@ -26,7 +26,7 @@
   "git_panel": {
     "status_style": "icon",
   },
-  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "icon_theme": "VSCode Icons for Zed (Light Angular)",
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
