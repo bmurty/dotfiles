@@ -1,4 +1,15 @@
 {
+  "close_on_file_delete": true,
+  "search": {
+    "center_on_match": true,
+  },
+  "indent_guides": {
+    "coloring": "indent_aware",
+  },
+  "message_editor": {
+    "auto_replace_emoji_shortcode": false,
+  },
+  "autosave": "on_focus_change",
   "show_whitespaces": "trailing",
   "tab_size": 2,
   "agent_ui_font_size": 20.0,
@@ -32,6 +43,13 @@
     "diagnostics": false,
     "metrics": false,
   },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/node_modules",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.settings",
+  ],
   "calls": {
     "mute_on_join": true,
   },
@@ -132,7 +150,6 @@
     "codeowners": true,
     "csv": true,
     "desktop": true,
-    "django": true,
     "dockerfile": true,
     "git-firefly": true,
     "html": true,
@@ -140,13 +157,11 @@
     "make": true,
     "mcp-server-github": true,
     "php": true,
-    "prisma": true,
     "python-requirements": true,
     "rainbow-csv": true,
     "sql": true,
     "toml": true,
     "vscode-icons": true,
-    "xml": true,
   },
   "lsp": {
     "json-language-server": {
