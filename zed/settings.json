@@ -1,7 +1,7 @@
 {
   "show_whitespaces": "trailing",
   "tab_size": 2,
-  "agent_ui_font_size": 22.0,
+  "agent_ui_font_size": 20.0,
   "edit_predictions": {
     "disabled_globs": ["~/.**"],
     "mode": "subtle",
@@ -65,9 +65,9 @@
   },
   "buffer_line_height": "standard",
   "buffer_font_weight": 500.0,
-  "ui_font_size": 19.0,
+  "ui_font_size": 18.0,
   "line_indicator_format": "long",
-  "buffer_font_size": 22.0,
+  "buffer_font_size": 20.0,
   "diagnostics": { "button": false },
   "collaboration_panel": { "button": false },
   "title_bar": {
