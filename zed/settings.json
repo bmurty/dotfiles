@@ -103,6 +103,7 @@
     "git_gutter": "tracked_files",
     "hunk_style": "staged_hollow",
     "inline_blame": {
+      "min_column": 5,
       "enabled": true,
       "show_commit_summary": false,
       "delay_ms": 500,
@@ -225,7 +226,6 @@
     "make": true,
     "mcp-server-github": true,
     "php": true,
-    "powershell": true,
     "python-requirements": true,
     "rainbow-csv": true,
     "sql": true,
