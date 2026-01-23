@@ -1,8 +1,7 @@
 {
+  "show_whitespaces": "trailing",
+  "tab_size": 2,
   "agent_ui_font_size": 22.0,
-  "features": {
-    "edit_prediction_provider": "copilot",
-  },
   "edit_predictions": {
     "disabled_globs": ["~/.**"],
     "mode": "subtle",
@@ -51,15 +50,17 @@
   "agent": {
     "enable_feedback": false,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+      "provider": "copilot_chat",
+      "model": "gpt-4.1",
     },
     "model_parameters": [],
   },
   "context_servers": {
     "mcp-server-github": {
       "enabled": true,
-      "settings": {},
+      "settings": {
+        "github_personal_access_token": "",
+      },
     },
   },
   "buffer_line_height": "standard",
@@ -84,6 +85,8 @@
     "shell": {
       "program": "/bin/bash",
     },
+    "keep_selection_on_copy": false,
+    "option_as_meta": true,
     "dock": "bottom",
     "default_height": 400,
   },
