@@ -223,6 +223,7 @@
     "git-firefly": true,
     "html": true,
     "ini": true,
+    "log": true,
     "make": true,
     "mcp-server-github": true,
     "php": true,
