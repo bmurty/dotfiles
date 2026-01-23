@@ -77,6 +77,7 @@
   },
   "autoscroll_on_clicks": true,
   "scroll_beyond_last_line": "vertical_scroll_margin",
+  "vertical_scroll_margin": 5,
   "git_panel": {
     "status_style": "label_color",
     "button": true,
@@ -172,6 +173,7 @@
     "light": "One Dark",
     "mode": "dark",
   },
+  "excerpt_context_lines": 5,
   "theme_overrides": {
     "One Dark": {
       "background": "#000",
