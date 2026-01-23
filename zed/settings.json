@@ -225,6 +225,7 @@
     "make": true,
     "mcp-server-github": true,
     "php": true,
+    "powershell": true,
     "python-requirements": true,
     "rainbow-csv": true,
     "sql": true,
