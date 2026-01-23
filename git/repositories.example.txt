@@ -1,2 +1,0 @@
-git@github.com:brendanmurty/dotfiles.git brendanmurty-dotfiles
-git@github.com:laravel/laravel.git php-laravel

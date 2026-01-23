@@ -1,6 +1,4 @@
-tabs-*.txt
-!tabs-example.txt
-
-windows-programs.txt
-
-photos.env
+.env
+*.env
+*.env.*
+!photos.env.example

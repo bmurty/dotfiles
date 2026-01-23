@@ -10,8 +10,9 @@ node_modules/
 vendor/
 
 .env
+*.env
+*.env.*
 *.key
-repositories.txt
 
 tmp/
 .tags
