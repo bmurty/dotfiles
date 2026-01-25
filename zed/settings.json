@@ -3,8 +3,8 @@
   "soft_wrap": "preferred_line_length",
   "allow_rewrap": "anywhere",
   "tab_bar": {
-    "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": true,
+    "show_tab_bar_buttons": true,
   },
   "tabs": {
     "show_close_button": "hidden",
@@ -75,10 +75,10 @@
   },
   "inline_code_actions": true,
   "gutter": {
-    "folds": false,
+    "folds": true,
     "breakpoints": false,
   },
-  "autoscroll_on_clicks": true,
+  "autoscroll_on_clicks": false,
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "vertical_scroll_margin": 5,
   "git_panel": {
@@ -103,7 +103,7 @@
     "inline_blame": {
       "min_column": 5,
       "enabled": true,
-      "show_commit_summary": true,
+      "show_commit_summary": false,
       "delay_ms": 5000,
     },
   },
@@ -134,7 +134,7 @@
   "diagnostics": { "button": false },
   "collaboration_panel": { "button": false },
   "title_bar": {
-    "show_branch_icon": false,
+    "show_branch_icon": true,
     "show_menus": true,
     "show_onboarding_banner": false,
   },
