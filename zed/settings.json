@@ -85,7 +85,7 @@
     "status_style": "label_color",
     "button": true,
   },
-  "icon_theme": "VSCode Icons for Zed (Light Angular)",
+  "icon_theme": "Modern Icons (Dark)",
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
@@ -219,7 +219,7 @@
     "rainbow-csv": true,
     "sql": true,
     "toml": true,
-    "vscode-icons": true,
+    "modern-icons": true,
   },
   "lsp": {
     "json-language-server": {
