@@ -85,7 +85,7 @@
     "status_style": "label_color",
     "button": true,
   },
-  "icon_theme": "Modern Icons (Dark)",
+  "icon_theme": "Colored Zed Icons Theme Light",
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
@@ -219,7 +219,7 @@
     "rainbow-csv": true,
     "sql": true,
     "toml": true,
-    "modern-icons": true,
+    "colored-zed-icons-theme": true,
   },
   "lsp": {
     "json-language-server": {
