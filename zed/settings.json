@@ -199,6 +199,7 @@
   },
   "auto_install_extensions": {
     "codeowners": true,
+    "colored-zed-icons-theme": true,
     "csv": true,
     "desktop": true,
     "dockerfile": true,
@@ -211,7 +212,7 @@
     "rainbow-csv": true,
     "sql": true,
     "toml": true,
-    "colored-zed-icons-theme": true,
+    "just": true,
   },
   "lsp": {
     "json-language-server": {
