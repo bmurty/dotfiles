@@ -1,18 +1,18 @@
 #!/usr/bin/python
 #
 # Photo management script
-# 
+#
 # ----
-# 
+#
 # Originally forked from https://gist.github.com/cliss/6854904
-# 
+#
 # Organises all media files (defined by "mediaFileExtensions") in a source directory in to a subdirectory of the destination directory named like:
 #   2020\01 Jan\
-# 
+#
 # Assumes that the source directory doesn't have any sub-directories.
-# 
+#
 # The source and destination directories are defined in "photos.env".
-# 
+#
 # Setup:
 #   1. Configure the alias command:
 #       echo "alias photomgmt='python /path/to/dotfiles/scripts/media-management/photos.py'" >> ~/.bashrc
@@ -22,7 +22,7 @@
 #       vim photos.env
 #   3. Run the script:
 #       photomgmt
-# 
+#
 # Requirements:
 #  - For Windows 11
 #   - Python 3: https://www.python.org/downloads/
@@ -30,27 +30,33 @@
 #   - Python-dotenv: https://pypi.org/project/python-dotenv/
 #  - For Ubuntu 24.04
 #   - sudo apt install python-is-python3 python3-exifread python3-dotenv
-#  
+#
 
-import sys
-import os, shutil
+import os
 import os.path
-import exifread
+import shutil
+import sys
 from datetime import datetime
+
+import exifread
 from dotenv import dotenv_values
 
 ### Functions
+
 
 def photoDate(f):
     "Return the date/time on which the given photo was taken."
 
     try:
-        img = open(f, 'rb')
+        img = open(f, "rb")
         imgTags = exifread.process_file(img)
-        return datetime.strptime(str(imgTags['EXIF DateTimeOriginal']), "%Y:%m:%d %H:%M:%S")
+        return datetime.strptime(
+            str(imgTags["EXIF DateTimeOriginal"]), "%Y:%m:%d %H:%M:%S"
+        )
     except:
         # Default to using today's date if the required image properties can't be found
         return datetime.now()
+
 
 ### Main program
 
@@ -63,9 +69,9 @@ script_file_path = os.path.dirname(__file__)
 config = dotenv_values("%s/photos.env" % script_file_path)
 
 # Where the media files are and where they're going
-sourceDir = "%s" % (config['PHOTOMGMT_SOURCE_DIR'])
-destDir = "%s" % (config['PHOTOMGMT_DEST_DIR'])
-errorDir = "%s" % (config['PHOTOMGMT_ERROR_DIR'])
+sourceDir = "%s" % (config["PHOTOMGMT_SOURCE_DIR"])
+destDir = "%s" % (config["PHOTOMGMT_DEST_DIR"])
+errorDir = "%s" % (config["PHOTOMGMT_ERROR_DIR"])
 
 # Create the required directories
 if not os.path.exists(destDir):
@@ -81,29 +87,29 @@ problems = []
 
 # Get all the media files in the source folder
 mediaFileExtensions = [
-    '.bmp',
-    '.BMP',
-    '.DNG',
-    '.dng',
-    '.gif',
-    '.GIF',
-    '.jpg',
-    '.JPG',
-    'jpeg',
-    'JPEG',
-    '.mov',
-    '.MOV',
-    '.mp4',
-    '.MP4',
-    '.png',
-    '.PNG',
-    'heic',
-    'HEIC',
-    'hevc',
-    'HEVC'
+    ".bmp",
+    ".BMP",
+    ".DNG",
+    ".dng",
+    ".gif",
+    ".GIF",
+    ".jpg",
+    ".JPG",
+    "jpeg",
+    "JPEG",
+    ".mov",
+    ".MOV",
+    ".mp4",
+    ".MP4",
+    ".png",
+    ".PNG",
+    "heic",
+    "HEIC",
+    "hevc",
+    "HEVC",
 ]
 photos = os.listdir(sourceDir)
-photos = [ x for x in photos if x[-4:] in mediaFileExtensions ]
+photos = [x for x in photos if x[-4:] in mediaFileExtensions]
 
 # Prepare to output as processing occurs
 lastMonth = 0
@@ -115,7 +121,7 @@ lastYear = 0
 for photo in photos:
     original = "%s/%s" % (sourceDir, photo)
     fileExtension = os.path.splitext(original)[1]
-    suffix = 'a'
+    suffix = "a"
 
     try:
         pDate = photoDate(original)
@@ -123,21 +129,26 @@ for photo in photos:
         mo = pDate.month
 
         # Generate the name of the sub-directory, in the style of "01 Jan" based on the photo's modified date
-        moDirectory = "%s" % datetime.strftime(pDate, '%m %b')
-        
+        moDirectory = "%s" % datetime.strftime(pDate, "%m %b")
+
         # Generate the new filename for the file
         newname = pDate.strftime(fmt)
 
         # Ensure the destination directory is created, in the style of "2020" > "01 Jan"
-        thisDestDir = destDir + '/%04d/%s' % (yr, moDirectory)
+        thisDestDir = destDir + "/%04d/%s" % (yr, moDirectory)
         if not os.path.exists(thisDestDir):
             os.makedirs(thisDestDir)
 
         # Manage naming of files if many exists with the same creation date
-        duplicate = thisDestDir + '/%s%s' % (newname, fileExtension)
+        duplicate = thisDestDir + "/%s%s" % (newname, fileExtension)
         while os.path.exists(duplicate):
             newname = pDate.strftime(fmt) + suffix
-            duplicate = destDir + '/%04d/%s/%s%s' % (yr, moDirectory, newname, fileExtension)
+            duplicate = destDir + "/%04d/%s/%s%s" % (
+                yr,
+                moDirectory,
+                newname,
+                fileExtension,
+            )
             suffix = chr(ord(suffix) + 1)
 
         # Move the file to the destination directory
