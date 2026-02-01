@@ -118,14 +118,6 @@
     },
     "model_parameters": [],
   },
-  "context_servers": {
-    "mcp-server-github": {
-      "enabled": true,
-      "settings": {
-        "github_personal_access_token": "",
-      },
-    },
-  },
   "buffer_line_height": "standard",
   "buffer_font_weight": 500.0,
   "ui_font_size": 18.0,
@@ -214,7 +206,7 @@
     "html": true,
     "ini": true,
     "log": true,
-    "mcp-server-github": true,
+    "make": true,
     "python-requirements": true,
     "rainbow-csv": true,
     "sql": true,
