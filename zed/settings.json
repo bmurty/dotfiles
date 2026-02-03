@@ -201,6 +201,7 @@
     "codeowners": true,
     "colored-zed-icons-theme": true,
     "csv": true,
+    "deno": true,
     "desktop": true,
     "dockerfile": true,
     "git-firefly": true,
