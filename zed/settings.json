@@ -1,4 +1,5 @@
 {
+  "use_auto_surround": false,
   "use_autoclose": false,
   "preferred_line_length": 100,
   "soft_wrap": "preferred_line_length",
